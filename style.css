@@ -1,0 +1,96 @@
+body {
+    margin-top: 50px;
+    padding: 0;
+    background-color: #181818;
+    font-family: 'Helvetica', sans-serif;
+}
+
+.calc-container {
+    margin: auto;
+    width: 200px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #303030;
+    border-radius: 5px;
+}
+
+.display-container {
+    padding: 10px;
+}
+
+.display {
+    border: none;
+    text-align: end;
+    background-color: #303030;
+    color: #fff;
+    font-size: 16px;
+    width: 180px;
+}
+
+
+.numpad {
+    display: flex;
+    gap: .5em;
+}
+
+.row-container{
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    border: 1px solid red;
+}
+
+.row {
+    display: flex;
+    gap: .5em;
+}
+
+.column-container {
+    border: 1px solid red;
+    display: flex; 
+    flex-direction: column;
+    justify-content: stretch;
+    gap: .2em;
+}
+
+
+.seven,
+.eight,
+.nine,
+.four,
+.five,
+.six,
+.one,
+.two,
+.three,
+.zero,
+.decimal,
+.clear {
+    width: 3em;
+    padding: 10px;
+    border: none;
+    border-radius: 2px;
+}
+
+.multiply,
+.add,
+.subtract,
+.divide {
+    width: 3em;
+    padding: 10px;
+    border: none;
+    border-radius: 2px;
+    background-color: #a3a3a3;
+}
+
+.equal {
+    width: 3em;
+    padding: 10px;
+    border: none;
+    border-radius: 2px;
+    background-color: #FF7F50;
+
+}
+
