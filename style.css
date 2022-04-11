@@ -1,96 +1,125 @@
+html {
+    font-size: 150%;
+    font-weight: 300;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+}
+
 body {
-    margin-top: 50px;
-    padding: 0;
-    background-color: #181818;
-    font-family: 'Helvetica', sans-serif;
+   display: flex;
+   background: #b92b27;
+   background: -webkit-linear-gradient(to right, #1565C0, #b92b27);
+   background: linear-gradient(to right, #1565C0, #b92b27); 
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
 }
 
-.calc-container {
-    margin: auto;
-    width: 200px;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #303030;
-    border-radius: 5px;
-}
-
-.display-container {
-    padding: 10px;
+.calculator {
+    box-shadow: 0 0 25px 0 rgba(0,0,0,0);
+    border-radius: 0.5em;
+    overflow: hidden;
 }
 
 .display {
-    border: none;
-    text-align: end;
-    background-color: #303030;
-    color: #fff;
-    font-size: 16px;
-    width: 180px;
+    background-color: #1f2933;
+    color: #f5f7fa;
+    width: 16.25rem;
+    padding: 0.75rem 1rem;
+    text-align: right;
+    font-size: calc(1rem * 1.2 * 1.2);
 }
 
-
-.numpad {
-    display: flex;
-    gap: .5em;
+.keys {
+    display: grid;
+    grid-gap: 2px;
+    grid-template-columns: repeat(4, auto);
+    grid-template-areas: 
+    ". . . ."
+    "seven eight nine equal"
+    "four five six equal"
+    "one two three equal"
+    "zero decimal clear equal";
 }
 
-.row-container{
-    display: flex;
-    flex-direction: column;
-    gap: .5em;
-    border: 1px solid red;
+.keys > button {
+    padding: 0.75rem;
+    border: 0;
+    font-size: 18px;
+    cursor: pointer;
 }
 
-.row {
-    display: flex;
-    gap: .5em;
+.one {
+    grid-area: one;
 }
 
-.column-container {
-    border: 1px solid red;
-    display: flex; 
-    flex-direction: column;
-    justify-content: stretch;
-    gap: .2em;
+.two {
+    grid-area: two;
 }
 
+.three {
+    grid-area: three;
+}
 
-.seven,
-.eight,
-.nine,
-.four,
-.five,
-.six,
-.one,
-.two,
-.three,
-.zero,
-.decimal,
+.four {
+    grid-area: four;
+}
+
+.five {
+    grid-area: five;
+}
+
+.six {
+    grid-area: six;
+}
+
+.seven {
+    grid-area: seven;
+}
+
+.eight {
+    grid-area: eight;
+}
+
+.nine {
+    grid-area: nine;
+}
+
+.zero {
+    grid-area: zero;
+}
+
+.decimal {
+    grid-area: decimal;
+}
+
 .clear {
-    width: 3em;
-    padding: 10px;
-    border: none;
-    border-radius: 2px;
-}
-
-.multiply,
-.add,
-.subtract,
-.divide {
-    width: 3em;
-    padding: 10px;
-    border: none;
-    border-radius: 2px;
-    background-color: #a3a3a3;
+    grid-area: clear;
 }
 
 .equal {
-    width: 3em;
-    padding: 10px;
-    border: none;
-    border-radius: 2px;
-    background-color: #FF7F50;
-
+    grid-area: equal;
+    background-color: #35ebdb;
 }
 
+.equal:focus {
+    background-color: #5ce0d5;
+}
+
+.operator {
+    background-color: #bec5d1;
+}
+
+.operator:focus,
+.operator:active {
+    background: #a0a4ad;
+}
+
+.number {
+    background-color: #fff;
+}
+
+.number:focus,
+.number:active {
+    background: #e5e7eb;
+}
