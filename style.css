@@ -102,24 +102,23 @@ body {
     background-color: #35ebdb;
 }
 
-.equal:focus {
+.equal:active {
     background-color: #5ce0d5;
 }
 
-.operator {
-    background-color: #bec5d1;
+[data-type="operator"] {
+    background-color: #d5dae4;
 }
 
-.operator:focus,
-.operator:active {
-    background: #a0a4ad;
-}
-
-.number {
+[data-type="number"] {
     background-color: #fff;
 }
 
-.number:focus,
-.number:active {
-    background: #e5e7eb;
+[data-type="operator"]:active,
+[data-type="number"]:active {
+    background: #aeb1b6;
+}
+
+[data-state="selected"] {
+    background: #aeb1b6;
 }
